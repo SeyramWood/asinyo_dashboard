@@ -1,0 +1,74 @@
+/***********************************
+            BASIC RESET
+***********************************/
+@import url("https://fonts.googleapis.com/css2?family=Handlee&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100&display=swap");
+:root {
+  --swiper-theme-color: #284734;
+  --swiper-navigation-color: #284734;
+  --swiper-pagination-color: #284734;
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+html {
+  /* 
+    Converting default browser font-size of 16px to 10px in percentage
+    10px / 16px * 100 = 62.5%, thus 1rem = 62.5% = 10px
+    */
+  font-size: 62.5%;
+
+  @include respond-up(lg) {
+    font-size: 75%; // 1rem = 12px, 12/16*100 = 75%
+  }
+  @include respond-down(md) {
+    font-size: 56.25%; // 1rem = 9px, 8/16*100 = 56.25%
+  }
+  @include respond-down(sm) {
+    font-size: 50%; // 1rem = 8px, 8/16 * 100 = 50%;
+  }
+
+  overflow-y: initial;
+}
+body {
+  text-rendering: optimizeLegibility;
+  box-sizing: border-box;
+  font-family: $font-family;
+  font-weight: $line-weight-base;
+  font-size: 1.2rem;
+  line-height: $line-height-base;
+  color: $text;
+  background: $bg;
+  min-height: 100vh;
+  @include scrollbar;
+  @include respond-down(sm) {
+    font-size: 1.6rem;
+  }
+}
+a,
+a:active {
+  color: $text;
+  text-decoration: none;
+}
+::selection {
+  background-color: $main;
+  color: #fff !important;
+}
+ol,
+ul,
+dl {
+  margin: 0 !important;
+}
+#components-layout-demo-fixed-sider .logo {
+  height: 32px;
+  margin: 16px;
+  background: rgba(255, 255, 255, 0.2);
+}
+.site-layout .site-layout-background {
+  background: #fff;
+}

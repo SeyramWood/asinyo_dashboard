@@ -1,0 +1,170 @@
+.asinyo__account__wrapper {
+  width: 100%;
+  min-height: calc(
+    100vh - calc(#{$header-height} + #{$nav-height} + #{$footer-height})
+  );
+  margin: 3rem 0;
+  @include flexbox;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &__title {
+    margin-bottom: 3rem;
+  }
+  &__panel {
+    width: 50%;
+    @include box-shadow;
+    padding: 4rem;
+    border-radius: 10px;
+    &__form {
+      & > .forgot__password {
+        text-align: end;
+        line-height: 0;
+        text-transform: capitalize;
+        margin-top: 1.3rem;
+        margin-bottom: 3rem;
+        & > a {
+          transition: all 0.2s ease-in;
+          color: $main;
+          text-decoration: underline;
+        }
+        & > a:hover {
+          text-decoration: underline;
+        }
+      }
+
+      & > .divider {
+        position: relative;
+        width: 100%;
+        color: $text;
+        text-align: center;
+        padding: 3rem 0;
+        @include flexbox;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase;
+
+        &::before,
+        &::after {
+          display: inline-block;
+          position: absolute;
+          content: "";
+          width: 45%;
+          height: 1px;
+          background-color: $text;
+        }
+        &::before {
+          left: 0;
+        }
+        &::after {
+          right: 0;
+        }
+      }
+
+      & > .dont__have__an__account {
+        text-align: center;
+        & > a {
+          transition: all 0.2s ease-in;
+          color: $main;
+          text-decoration: underline;
+        }
+        & > a:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+.asinyo__account__dashboard {
+  width: 100%;
+  padding: 3rem $container-padding;
+  @include flexbox;
+  justify-content: flex-start;
+  &__aside {
+    width: 25%;
+    margin-right: 3rem;
+    &__nav {
+      list-style-type: none;
+      @include fronend-nav;
+    }
+  }
+  &__main {
+    width: 75%;
+    margin-left: 3rem;
+  }
+
+  &__myaccount {
+    width: 100%;
+    & > h3 {
+      color: $main-light;
+      margin-bottom: 3rem;
+    }
+    &__content {
+      width: 100%;
+      @include flexbox;
+      justify-content: flex-start;
+      align-items: flex-start;
+
+      &__left {
+        width: 50%;
+        padding-right: 1rem;
+      }
+      &__right {
+        width: 50%;
+        padding-left: 1rem;
+      }
+    }
+
+    & .account__details {
+      padding: 0.5rem 1rem;
+      &__header {
+        margin-bottom: 2rem;
+        padding: 0.5rem 0;
+        @include flexbox;
+        justify-content: space-between;
+        align-items: center;
+        & > h4 {
+          text-transform: uppercase;
+          font-weight: 400;
+        }
+      }
+      &__address__type {
+        text-transform: capitalize;
+        font-weight: 300;
+        margin-bottom: 1rem;
+      }
+      &__defualt {
+        width: 100%;
+        @include flexbox;
+        justify-content: space-between;
+        align-items: center;
+      }
+      &__overview {
+        margin-bottom: 2rem;
+        & > p:last-child {
+          color: $text-2;
+          font-size: 1.1rem;
+        }
+        & > address {
+          color: $text-2 !important;
+          font-size: 1.1rem;
+          font-style: normal;
+        }
+      }
+    }
+
+    & .change__password {
+      width: 50%;
+    }
+  }
+}
+
+.address__book__form {
+  width: 100%;
+  padding: 3rem 0;
+  & > form {
+    & > button {
+      margin-top: 3rem;
+    }
+  }
+}

@@ -1,7 +1,7 @@
-import '../styles/globals.css'
+import '../sass/app.scss'
 
-function MyApp({ Component, pageProps }) {
+function Asinyo({ Component, pageProps }) {
   return <Component {...pageProps} />
 }
 
-export default MyApp
+export default Asinyo
