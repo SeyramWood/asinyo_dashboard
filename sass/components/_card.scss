@@ -161,3 +161,15 @@
     }
   }
 }
+
+.s__card{
+  width: 100%;
+  padding: 1rem;
+  @include lineboxshadow;
+  border-radius: $border-radius;
+
+  &__title{
+    text-transform: capitalize;
+    margin-bottom: 2rem;
+  }
+}
