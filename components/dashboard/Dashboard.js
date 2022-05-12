@@ -29,7 +29,7 @@ const items = [
   },
 ];
 
-const Dashboard = ({children}) => {
+const Dashboard = ({ children }) => {
   const menu = useRef(null);
   const [asideNav, setAsideNav] = useState(false);
   const toggleAside = () => {
@@ -57,7 +57,7 @@ const Dashboard = ({children}) => {
               className="asinyo__dashboard__aside__nav__lists__list"
               onClick={navClicked}
             >
-              <Link href="/">
+              <Link href="/dashboard">
                 <a className="link__wrapper">
                   <div className="label">
                     <div className="icon__mini">
@@ -72,7 +72,7 @@ const Dashboard = ({children}) => {
               className="asinyo__dashboard__aside__nav__lists__list"
               onClick={navClicked}
             >
-              <Link href="/customers">
+              <Link href="/dashboard/customers">
                 <a className="link__wrapper">
                   <div className="label">
                     <div className="icon__mini">
@@ -87,7 +87,7 @@ const Dashboard = ({children}) => {
               className="asinyo__dashboard__aside__nav__lists__list"
               onClick={navClicked}
             >
-              <Link href="/agents">
+              <Link href="/dashboard/agents">
                 <a className="link__wrapper">
                   <div className="label">
                     <div className="icon__mini">
@@ -111,15 +111,53 @@ const Dashboard = ({children}) => {
               <div className="dropdown">
                 <ul>
                   <li>
-                    <Link href="/merchants/suppliers"><a >Supplier Merchants</a></Link>
+                    <Link href="/dashboard/merchants/suppliers"><a >Supplier Merchants</a></Link>
                   </li>
                   <li>
-                    <Link href="/merchants/retailers"><a >Retail Merchants</a></Link>
+                    <Link href="/dashboard/merchants/retailers"><a >Retail Merchants</a></Link>
                   </li>
                 </ul>
               </div>
             </li>
-            
+            <li className="asinyo__dashboard__aside__nav__lists__list">
+              <div className="link__wrapper" onClick={navClicked}>
+                <div className="label">
+                  <div className="icon__mini">
+                    <i className="pi pi-palette"></i>
+                  </div>
+                  <span>Products</span>
+                </div>
+                <div className="icon__right"></div>
+              </div>
+              <div className="dropdown">
+                <ul>
+                  <li>
+                    <Link href="/dashboard/products"><a >View Products</a></Link>
+                  </li>
+                  <li>
+                    <Link href="/dashboard/products/catalogue"><a >Catalogue</a></Link>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li className="asinyo__dashboard__aside__nav__lists__list">
+              <div className="link__wrapper" onClick={navClicked}>
+                <div className="label">
+                  <div className="icon__mini">
+                    <i className="pi pi-user-plus"></i>
+                  </div>
+                  <span>Users</span>
+                </div>
+                <div className="icon__right"></div>
+              </div>
+              <div className="dropdown">
+                <ul>
+                  <li>
+                    <Link href="/dashboard/users"><a >View Users</a></Link>
+                  </li>
+                </ul>
+              </div>
+            </li>
           </ul>
         </nav>
         <div
@@ -136,7 +174,7 @@ const Dashboard = ({children}) => {
             Search...
           </div>
           <ul className="asinyo__dashboard__main__header__right">
-            
+
             <li className="asinyo__dashboard__main__header__right__list">
               <div className="label">
                 <i
@@ -152,7 +190,7 @@ const Dashboard = ({children}) => {
             </li>
             <li className="asinyo__dashboard__main__header__right__list">
               <div className="label">
-              {/* <Avatar image="images/avatar/asiyajavayant.png" className="mr-2" size="large" shape="circle" /> */}
+                {/* <Avatar image="images/avatar/asiyajavayant.png" className="mr-2" size="large" shape="circle" /> */}
                 <Avatar
                   icon="pi pi-user"
                   size="large"
@@ -164,28 +202,28 @@ const Dashboard = ({children}) => {
               <div className="dropdown">
                 <ul>
                   <li>
-                  <Link href="/profile">
-                    <a >
-                    <span><i className="pi pi-user"></i></span>
-                    <span>Profile</span>
-                    </a>
+                    <Link href="/profile">
+                      <a >
+                        <span><i className="pi pi-user"></i></span>
+                        <span>Profile</span>
+                      </a>
                     </Link>
                   </li>
                   <li>
-                  <Link href="/preferences">
-                    <a >
-                    <span><i className="pi pi-cog"></i></span>
-                    <span>Preferences</span>
-                    </a>
+                    <Link href="/preferences">
+                      <a >
+                        <span><i className="pi pi-cog"></i></span>
+                        <span>Preferences</span>
+                      </a>
                     </Link>
                   </li>
                   <div className="separator"></div>
                   <li className="profile">
-                  <Link href="/sign-out">
-                    <a >
-                    <span><i className="pi pi-sign-out"></i></span>
-                    <span>Sign Out</span>
-                    </a>
+                    <Link href="/sign-out">
+                      <a >
+                        <span><i className="pi pi-sign-out"></i></span>
+                        <span>Sign Out</span>
+                      </a>
                     </Link>
                   </li>
                 </ul>

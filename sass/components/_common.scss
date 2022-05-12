@@ -66,3 +66,14 @@ button[type="button"].menu__icon {
     }
   }
 }
+
+.table__header {
+  width: 100%;
+  padding: 1.5rem 0;
+  @include flexbox;
+  justify-content: space-between;
+  align-items: center;
+  & > h3 {
+    text-transform: capitalize;
+  }
+}

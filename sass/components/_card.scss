@@ -162,13 +162,14 @@
   }
 }
 
-.s__card{
+.s__card {
   width: 100%;
   padding: 1rem;
   @include lineboxshadow;
+  background-color: $white;
   border-radius: $border-radius;
 
-  &__title{
+  &__title {
     text-transform: capitalize;
     margin-bottom: 2rem;
   }

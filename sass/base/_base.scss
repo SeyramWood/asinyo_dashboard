@@ -32,7 +32,6 @@ html {
   @include respond-down(sm) {
     font-size: 50%; // 1rem = 8px, 8/16 * 100 = 50%;
   }
-
   overflow-y: initial;
 }
 body {
@@ -46,9 +45,15 @@ body {
   background: $bg;
   min-height: 100vh;
   @include scrollbar;
-  @include respond-down(sm) {
-    font-size: 1.6rem;
-  }
+  // @include respond-down(xs) {
+  //   font-size: 1.6rem;
+  // }
+}
+.p-component,
+.p-inputtext {
+  font-family: $font-family;
+  font-size: 1.2rem;
+  font-weight: $line-weight-base;
 }
 a,
 a:active {
@@ -64,12 +69,16 @@ ul,
 dl {
   margin: 0 !important;
 }
+
+.p-dropdown,
+.p-inputtext {
+  width: 100%;
+}
 .p-avatar.p-avatar-lg {
   width: 2.5rem;
   height: 2.5rem;
   font-size: 1.5rem;
 }
-
 
 .datatable-filter-demo .p-paginator .p-paginator-current {
   margin-left: auto;
@@ -88,19 +97,27 @@ dl {
   font-weight: 400;
 }
 .datatable-filter-demo .p-datatable.p-datatable-customers .p-datatable-header {
-  padding: 1rem;
   text-align: left;
-  font-size: 1.5rem;
 }
 .datatable-filter-demo .p-datatable.p-datatable-customers .p-paginator {
   padding: 1rem;
 }
-.datatable-filter-demo .p-datatable.p-datatable-customers .p-datatable-thead > tr > th {
+.datatable-filter-demo
+  .p-datatable.p-datatable-customers
+  .p-datatable-thead
+  > tr
+  > th {
   text-align: left;
 }
-.datatable-filter-demo .p-datatable.p-datatable-customers .p-datatable-tbody > tr > td {
+.datatable-filter-demo
+  .p-datatable.p-datatable-customers
+  .p-datatable-tbody
+  > tr
+  > td {
   cursor: auto;
 }
-.datatable-filter-demo .p-datatable.p-datatable-customers .p-dropdown-label:not(.p-placeholder) {
+.datatable-filter-demo
+  .p-datatable.p-datatable-customers
+  .p-dropdown-label:not(.p-placeholder) {
   text-transform: uppercase;
 }

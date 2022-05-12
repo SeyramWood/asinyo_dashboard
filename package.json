@@ -11,12 +11,16 @@
   "dependencies": {
     "axios": "^0.26.1",
     "chart.js": "^3.7.1",
+    "jotai": "^1.6.5",
+    "js-cookie": "^3.0.1",
     "next": "12.1.5",
+    "next-cookies": "^2.0.3",
     "primeicons": "^5.0.0",
     "primereact": "^8.0.0",
     "react": "18.0.0",
     "react-dom": "18.0.0",
     "react-icons": "^4.3.1",
+    "react-svg-spinner": "^1.0.4",
     "sass": "^1.49.9"
   },
   "devDependencies": {

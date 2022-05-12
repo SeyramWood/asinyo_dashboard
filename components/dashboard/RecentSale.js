@@ -10,7 +10,7 @@ const RecentSale = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/api/data")
+      .get("http://localhost:3001/api/data")
       .then((res) => {
         setProducts((p) => (p = [...res.data]));
       })
@@ -31,8 +31,8 @@ const RecentSale = () => {
       <img
         src={`images/product/${rowData.image}`}
         onError={(e) =>
-          (e.target.src =
-            "https://www.primefaces.org/wp-content/uploads/2020/05/placeholder.png")
+        (e.target.src =
+          "https://www.primefaces.org/wp-content/uploads/2020/05/placeholder.png")
         }
         alt={rowData.image}
         className="product-image"
@@ -64,9 +64,8 @@ const RecentSale = () => {
       <Button icon="pi pi-refresh" />
     </div>
   );
-  const footer = `In total there are ${
-    products ? products.length : 0
-  } products.`;
+  const footer = `In total there are ${products ? products.length : 0
+    } products.`;
 
   return (
     <DataTable

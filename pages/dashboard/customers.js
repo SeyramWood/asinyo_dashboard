@@ -14,7 +14,7 @@ import { Slider } from "primereact/slider";
 import { TriStateCheckbox } from "primereact/tristatecheckbox";
 
 
-import { Dashboard } from "../components/dashboard";
+import { Dashboard } from "../../components/dashboard";
 import axios from "axios";
 
 const Customers = () => {
@@ -57,12 +57,12 @@ const Customers = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/api/customers")
+      .get("http://localhost:3001/api/customers")
       .then((res) => {
         setCustomers1(getCustomers(res.data));
         setLoading1(false);
         setCustomers2(getCustomers(res.data));
-      setLoading2(false);
+        setLoading2(false);
       })
       .catch((err) => {
         console.log(err);
@@ -85,9 +85,9 @@ const Customers = () => {
   };
 
   const formatCurrency = (value) => {
-    return value.toLocaleString("en-US", {
+    return value.toLocaleString("en-GH", {
       style: "currency",
-      currency: "USD",
+      currency: "GHS",
     });
   };
 
@@ -187,8 +187,8 @@ const Customers = () => {
           alt="flag"
           src="/images/flag/flag_placeholder.png"
           onError={(e) =>
-            (e.target.src =
-              "https://www.primefaces.org/wp-content/uploads/2020/05/placeholder.png")
+          (e.target.src =
+            "https://www.primefaces.org/wp-content/uploads/2020/05/placeholder.png")
           }
           className={`flag flag-${rowData.country.code}`}
           width={30}
@@ -236,8 +236,8 @@ const Customers = () => {
           alt={representative.name}
           src={`images/avatar/${representative.image}`}
           onError={(e) =>
-            (e.target.src =
-              "https://www.primefaces.org/wp-content/uploads/2020/05/placeholder.png")
+          (e.target.src =
+            "https://www.primefaces.org/wp-content/uploads/2020/05/placeholder.png")
           }
           width={32}
           style={{ verticalAlign: "middle" }}
@@ -268,8 +268,8 @@ const Customers = () => {
           alt={option.name}
           src={`images/avatar/${option.image}`}
           onError={(e) =>
-            (e.target.src =
-              "https://www.primefaces.org/wp-content/uploads/2020/05/placeholder.png")
+          (e.target.src =
+            "https://www.primefaces.org/wp-content/uploads/2020/05/placeholder.png")
           }
           width={32}
           style={{ verticalAlign: "middle" }}
@@ -420,7 +420,7 @@ const Customers = () => {
 
   const header1 = renderHeader1();
   const header2 = renderHeader2();
-  
+
   return (
     <Dashboard>
       <div className="datatable-filter-demo">
