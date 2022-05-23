@@ -14,6 +14,7 @@
     "jotai": "^1.6.5",
     "js-cookie": "^3.0.1",
     "next": "12.1.5",
+    "next-auth": "^4.3.4",
     "next-cookies": "^2.0.3",
     "primeicons": "^5.0.0",
     "primereact": "^8.0.0",
@@ -27,5 +28,9 @@
     "@faker-js/faker": "^6.2.0",
     "eslint": "8.13.0",
     "eslint-config-next": "12.1.5"
-  }
+  },
+  "main": "index.js",
+  "repository": "https://github.com/SeyramWood/asinyo_dashboard.git",
+  "author": "SeyramWood <prikahaeyram@gmail.com>",
+  "license": "MIT"
 }
